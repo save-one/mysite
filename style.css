@@ -1,0 +1,173 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.clearfix::after {
+	content: "";
+	display: block;
+	clear: both;
+}
+
+header {
+	width: 100%;
+	height: 70px;
+	background-color: #EC715F;
+}
+.logo {
+	width: auto;
+	height: auto;
+	 max-width: 100%;
+	 max-height: 100%;
+	 padding-left: 128px;
+}
+nav {
+	float:right;
+	margin-right: 128px;
+	height: 100%;
+}
+
+.nav-list-item {
+	display: inline;
+	 line-height: 70px;
+	 color: #FAFAFA;
+	 font-size: 16px;
+	 margin: 0 30px;
+}
+
+.main-visual {
+	width:100%;
+	height: 650px;
+	background-image: url(img/mv.png);
+	background-size: cover;
+}
+
+.main-visual-content {
+	padding-top: 200px;
+    text-align: center;
+}
+
+.main-visual-content h1 {
+	font-size: 64px;
+	color: #FAFAFA;
+}
+
+.main-visual-content h2 {
+	font-size: 20px;
+	padding-top: 10px;
+	color: #FAFAFA;
+}
+
+main {
+	width: 100%;
+	height: 1400px;
+}
+
+.portfolio {
+	background-color: #ECEFF1;
+}
+
+.main-headline {
+	text-align: center;
+}
+
+.main-headline h1 {
+	padding: 90px 0 8px 0;
+	color: #000000;
+	font-size: 32px;
+}
+
+hr {
+	width: 70px;
+	border-width: 3px;
+	border-style: solid;
+	border-color: #EC715F;
+	margin: 0 auto;
+}
+
+
+.main-headline h2 {
+	padding: 30px 0;
+	color: #000000;
+	font-size: 16px;
+}
+
+.main-bottom {
+	width: 920px;
+	margin: 0 auto;
+}
+
+.main-image {
+	width: 300px;
+	height: 250px;
+	background-size: cover;
+	background-position: center;
+	float: left;
+	margin: 0 10px 10px 0;
+}
+
+.main-image:nth-child(1){
+	background-image: url(img/sketch.jpg);
+}
+.main-image:nth-child(2) {
+	background-image: url(img/websuku.png);
+}
+.main-image:nth-child(3) {
+	background-image: url(img/write.jpg);
+	margin-right: 0;
+}
+.main-image:nth-child(4) {
+	background-image: url(img/webcamp.png);
+}
+.main-image:nth-child(5) {
+	background-image: url(img/talk.jpg);
+}
+.main-image:nth-child(6) {
+	background-image: url(img/webcamp-mother.png);
+	margin-right: 0;
+}
+
+.feature {
+	width: 980px;
+	margin: 0 auto;
+}
+
+.feature-headline {
+	text-align: center;
+}
+
+.feature-headline h1 {
+	font-size: 32px;
+	color: #000000;
+	margin: 90px 0 8px 0;
+}
+
+.feature-headline h2 {
+	font-size: 16px;
+	color: #000000;
+	margin: 30px 0 30px 0;
+}
+
+
+.feature-strength {
+	width: 320px;
+	float: left;
+	margin: 0 auto;
+}
+
+.feature-strength h3 {
+	font-size: 20px;
+	color: #000000;
+	text-align: center;
+}
+
+.feature-strength h4 {
+	font-size: 16px;
+	color: #000000;
+}
+
+.fa {
+	width: 60px;
+	height: 60px;
+
+}
