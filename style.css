@@ -9,21 +9,32 @@
 	clear: both;
 }
 
+/*画像検索で照合して出てきたフォント(Classic Grotesque Pro)は認識されなかった*/
+nav, .main-visual-content, .portfolio, .feature, .profile, .contact, footer {
+	font-family: /*Classic Grotesque Pro,*/ "Hiragino Kaku Gothic ProN", "メイリオ", sans-serif;
+}
+
 header {
 	width: 100%;
 	height: 70px;
 	background-color: #EC715F;
 }
+
+.header-box {
+	width: 1024px;
+	height: 70px;
+	margin: 0 auto;
+}
+
 .logo {
 	width: auto;
 	height: auto;
-	 max-width: 100%;
-	 max-height: 100%;
-	 padding-left: 128px;
+	max-width: 100%;
+    max-height: 100%;
 }
+
 nav {
 	float:right;
-	margin-right: 128px;
 	height: 100%;
 }
 
@@ -33,6 +44,93 @@ nav {
 	 color: #FAFAFA;
 	 font-size: 16px;
 	 margin: 0 30px;
+}
+
+
+#nav-drower {
+	position: relative;
+}
+
+.nav-unshown {
+	display: none; /*チェックボックスと閉じるときに使うものを見えなくする*/
+}
+
+#nav-open {
+	display: inline-block;
+	width: 44px;
+	height: 44px;
+	vertical-align: middle; /*縦方向のそろえ位置を中央に指定*/
+	float: right;
+	border-top: solid;
+	border-bottom: solid;
+	border-left: solid;
+	border-right: solid;
+	color: white;
+	padding: 10px 0 0 7px;
+	margin: 3px 8px 3px 0;
+	visibility: hidden;
+}
+
+#nav-open span, #nav-open span:before, #nav-open span:after {
+	position: absolute;
+	height: 3px;
+	width: 25px;
+	border-radius: 3px;
+	background: white;
+	display: block;
+	content: '';
+	cursor: pointer; /*カーソルの形を変える、マウスの矢印とか*/
+}
+
+#nav-open span:before {
+	bottom: -8px;   /*ーを使うと、下から上ではなく、下に位置を配置する*/
+}
+
+#nav-open span:after {
+	bottom: -16px;
+}
+
+#nav-close {
+	display: none; /*隠しておく*/
+	position: fixed; /*決まった位置に表示する。スクロールしても画面上に残るもの*/
+	z-index: 99; /*複数の要素に番号を持たせてその大きさで上に来る要素を決める*/
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: black;
+	opacity: 0; /*要素の透明度*/
+	transition: .3s ease-in-out; /*要素の時間による変化を指定*/
+}
+
+#nav-content {
+	overflow: auto; /*はみ出た部分の表示方法*/
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	width: auto;
+	max-width: 100%;
+	height: auto;
+	background: #fff;
+	transition: .3s ease-in-out; /*滑らかに表示する*/
+	-webkit-transform: translateX(-105%); /*ベンダーだと付けることを推奨される*/
+	transform: translateX(-105%); /*x軸方向に変形*/
+}
+
+#nav-input:checked ~ #nav-closed {
+	display: block;
+	opacity: .5;
+}
+
+#nav-input:checked ~ #nav-content {
+	-webkit-transform: translateX(0%);
+	box-shadow: 6px 0 25px rgba(0,0,0,.15); /*boxに影を付ける*/
+}
+
+#nav-content div {
+	font-size: 32px;
+	text-align: center;
 }
 
 .main-visual {
@@ -60,11 +158,16 @@ nav {
 
 main {
 	width: 100%;
-	height: 1400px;
 }
 
 .portfolio {
 	background-color: #ECEFF1;
+	padding-bottom: 90px;
+}
+
+.portfolio-block {
+	width: 920px;
+	margin: 0 auto;
 }
 
 .main-headline {
@@ -153,21 +256,307 @@ hr {
 	width: 320px;
 	float: left;
 	margin: 0 auto;
+	padding-bottom: 90px;
 }
 
 .feature-strength h3 {
 	font-size: 20px;
 	color: #000000;
 	text-align: center;
+	padding: 10px 0;
 }
 
 .feature-strength h4 {
+	width: 320px;
 	font-size: 16px;
 	color: #000000;
 }
 
-.fa {
-	width: 60px;
+.strength2 {
+	margin: 0 10px;
+}
+
+.feature-strength i {
+	font-size: 3em;
+}
+
+.my-code {
+	text-align: center;
+}
+
+.profile {
+	padding: 90px 0;
+	background-color: #ECEFF1;
+}
+
+.profile-block {
+	width: 1024px;
+	margin: 0 auto;
+}
+
+.profile-headline {
+	text-align: center;
+}
+
+.profile-headline h1 {
+	font-size: 32px;
+	color: #000000;
+	margin: 0 0 8px 0;
+}
+
+.profile-headline h2 {
+	font-size: 16px;
+	color: #000000;
+	margin: 30px 0;
+}
+
+.my-icon {
+	width: 512px;
+	float: left;
+	text-align: center;
+}
+
+.my-icon img {
+	width: 250px;
+	height: 250px;
+	border-radius: 50%;
+}
+
+.profile-my {
+	width: 512px;
+	float: left;
+}
+
+.profile-myname {
+	margin-bottom: 8px;
+}
+
+.profile-title {
+	font-size: 20px;
+	margin-bottom: 5px;
+	color: #000000;
+}
+
+
+.profile-content {
+	font-size: 16px;
+	color: #000000;
+}
+
+.contact {
+	width: 800px;
+	text-align: center;
+	margin: 0 auto;
+	padding: 90px 0;
+}
+
+.contact h1 {
+	font-size: 32px;
+	color: #000000;
+	margin: 0 0 8px 0;
+}
+
+.contact h2 {
+	font-size: 16px;
+	color: #000000;
+	margin: 30px 0;
+}
+
+.contact h3 {
+	font-size: 20px;
+	color: #000000;
+	margin-bottom: 5px;
+}
+
+.contact h4 {
+	font-size: 16px;
+	color: #000000;
+	margin-bottom: 20px;
+	display: inline-block;
+	border-bottom-style: solid;
+}
+
+.mail-tell {
+	float: left;
+	width: 400px;
+}
+
+.mail-tell-content {
+	display: inline-block;
+	text-align: left;
+}
+
+.social {
+	margin-bottom: 90px;
+	width: 400px;
+	float: right;
+}
+
+.social-content {
+	display: inline-block;
+	text-align: left;
+}
+
+.social-icon {
+	font-size: 3.125em;
+}
+
+.fa-twitter {
+	margin: 0 20px;
+}
+
+footer {
+	width: 100%;
 	height: 60px;
+	background-color: #EC715F;
+}
+
+footer h2 {
+	font-size: 16px;
+	text-align: center;
+	line-height: 60px;
+	color: #FAFAFA;
+}
+
+
+
+@media screen and (max-width:768px) {
+	header {
+		height: 50px;
+	}
+
+	.header-box {
+		height: 50px;
+	}
+
+	.header-box {
+		width: 100%;
+	}
+
+	.logo {
+		padding-left: 16px;
+	}
+
+	.nav {
+		margin-right: 0;
+	}
+
+	nav {
+	    display: none;
+    }
+
+    #nav-open {
+    	visibility: visible;
+    }
+
+    .main-visual {
+    	height: 750px;
+    	background-image: url(img/code.png);
+    }
+
+    .main-visual-content h1 {
+    	font-size: 40px;
+    }
+
+    .main-visual-content h2 {
+    	font-size: 18px;
+    }
+
+    .portfolio-block {
+    	width: 90%;
+    }
+
+    .main-bottom {
+    	width: 90%;
+    }
+
+    .main-image {
+    	float: none;
+    	margin: 0 auto;
+    	margin-bottom: 10px;
+    }
+
+    .main-image:nth-child(odd) {
+    	display: none;
+    }
+
+    .main-image:nth-child(6) {
+    	margin: 0 auto;
+    }
+
+    .feature {
+    	width: 90%;
+    }
+
+    .feature-strength {
+    	width: 100%;
+    	text-align: center;
+    	padding-bottom: 10px;
+    }
+
+    .feature-strength h4 {
+    	display: inline-block;
+    	text-align: left;
+    }
+
+    .strength2 {
+    	margin: 0 0;
+    }
+
+    .strength3 {
+    	padding-bottom: 90px;
+    }
+
+    .profile-block {
+    	width: 90%;
+    }
+
+    .my-icon {
+    	width: 100%;
+    	float: none;
+    	margin: 0 auto;
+    }
+
+    .profile-my {
+    	width: 100%;
+    	float: none;
+    	text-align: center;
+    }
+
+    .profile-title {
+    	margin-top: 20px;
+    }
+
+    .contact {
+    	width: 90%;
+    }
+
+    .mail-tell {
+    	width: 100%;
+    	float:none;
+    }
+
+    .mail-tell-content {
+    	float: none;
+    	text-align: center;
+    }
+
+    .social {
+    	width: 100%;
+    	float: none;
+    	margin: 0 auto;
+    }
+
+    .fa-twitter {
+    	margin: 0 8px;
+    }
+
+    .contact h3 {
+    	text-align: center;
+    }
 
 }
+
+
+
+

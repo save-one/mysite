@@ -2,11 +2,31 @@
 <html>
 <head>
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
 	<link rel="stylesheet" href="style.css">
 	<title>MySite</title>
 <body>
+
 	<header>
+		    <div id="nav-drawer">
+			<input id="nav-input" type="checkbox" class="nav-unshown">
+			<label id="nav-open" for="nav-input">
+				<span></span>
+			</label>
+			<label class="nav-unshown" id="nav-close" for="nav-input">
+			</label>
+			<div id="nav-content">
+				<div>Portfolio</div>
+				<hr>
+				<div>Feature</div>
+				<hr>
+				<div>Profile</div>
+				<hr>
+				<div>Contact</div>
+			</div>
+		</div>
+		<div class="header-box">
 		<a href="index.html"><img class="logo" src="img/logo.png"></a>
 		<nav class="clearfix">
 		<ul class="nav-list">
@@ -15,7 +35,8 @@
 			<li class="nav-list-item">Profile</li>
 			<li class="nav-list-item">Contact</li>
 		</ul>
-	</nav>
+	    </nav>
+	    </div>
 	</header>
 
 	<div class="main-visual">
@@ -27,6 +48,7 @@
 
 	<main>
 		<div class="portfolio">
+			<div class="portfolio-block">
 		<div class="main-headline">
 			<h1>Portfolio</h1>
 			<hr>
@@ -44,7 +66,8 @@
 			</div>
 		</div>
 	    </div>
-	    <div class="feature">
+	    </div>
+	    <div class="feature clearfix">
 	    	<div class="feature-headline">
 	    		<h1>Feature</h1>
 	    		<hr>
@@ -54,7 +77,9 @@
 	    	    </h2>
 	    	</div>
 	    	<div class="feature-strength">
-	    		<i class="fa fa-code"></i>
+	    		<div class="my-code">
+	    		<i class="fas fa-code "></i>
+	    	    </div>
 	    		<h3>Strength1</h3>
 	    		<h4>Contrary to popular belief, Lorem Ipsum<br>
 	    			is not simply random text. It has roots<br>
@@ -66,8 +91,10 @@
 	    			obscure Latin words, consectetur
 	    		</h4>
 	    	</div>
-	    	<div class="feature-strength">
-	    		<i class="fa fa-code"></i>
+	    	<div class="feature-strength strength2">
+	    		<div class="my-code">
+	    		<i class="fas fa-code"></i>
+	         	</div>
 	    		<h3>Strength2</h3>
 	    		<h4>Contrary to popular belief, Lorem Ipsum<br>
 	    			is not simply random text. It has roots<br>
@@ -79,8 +106,10 @@
 	    			obscure Latin words, consectetur
 	    		</h4>
 	    	</div>
-	    	<div class="feature-strength">
-	    		<i class="fa fa-code"></i>
+	    	<div class="feature-strength strength3">
+	    		<div class="my-code">
+	    		<i class="fas fa-code"></i>
+	    	    </div>
 	    		<h3>Strength3</h3>
 	    		<h4>Contrary to popular belief, Lorem Ipsum<br>
 	    			is not simply random text. It has roots<br>
@@ -93,8 +122,70 @@
 	    		</h4>
 	    	</div>
 	    </div>
+	    <div class="profile">
+	    	<div class="profile-block">
+	    	<div class="profile-headline">
+	    	    <h1>Profile</h1>
+	    	    <hr>
+	    	    <h2>It is a long established fact that a reader will be distracted by the readable<br>
+	    	    	content of a page when looking at its layout.<br>
+	    	    	The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters
+	    	    </h2>
+	        </div>
+	        <div class="clearfix">
+	        <div class="my-icon">
+	        <img src="img/my-icon.jpg">
+	        </div>
+	        <div class="profile-my">
+	        <div class="profile-myname">
+	        	<h3 class="profile-title">MyName</h3>
+	        	<h4 class="profile-content">Contrary to popular belief, Lorem Ipsumis not simply random<br>
+	        		text. It has roots in a piece of classical Latin literature from 45<br>
+	        		BC, making it over 2000 years old. Richard McClintock, a Latin<br>
+	        		professor at Hampden-Sydney College in Virginia, looked up<br>
+	        		one of the more obscure Latin words, consectetur
+	    		</h4>
+	        </div>
+	        <div class="profile-myskills">
+	        	<h3 class="profile-title">MySkills</h3>
+	        	<h4 class="profile-content">HTML/CSS/Javascript/JQuery/PhotoShop</h4>
+	        </div>
+	        </div>
+	    </div>
+	    </div>
+	    </div>
+	    <div class="contact  clearfix">
+	    	<h1>Contact</h1>
+	    	<hr>
+	    	<h2>It is a long established fact that a reader will<br>
+	    		be distracted by the readable<br>
+	    	    	content of a page when looking at its layout.<br>
+	    	    	The point of using Lorem Ipsum is that it<br>has a more-or-less normal distribution of<br>letters
+	    	</h2>
+	    	<div class="mail-tell">
+	    		<div class="mail-tell-content">
+	    	<h3>Mail</h3>
+	    	<h4>xxx@xxx.com</h4>
+	    	<h3>Tell</h3>
+	    	<h4>000-0000-0000</h4>
+	        </div>
+	        </div>
+	        <div class="social">
+	        <div class="social-content">
+	    	<h3>SNS</h3>
+	    	<div class="social-icon">
+	    		<i class="fab fa-facebook-f"></i>
+	    		<i class="fab fa-twitter"></i>
+	    		<i class="fab fa-instagram"></i>
+	    	</div>
+	        </div>
+	        </div>
+	    </div>
 	</main>
 
-	
+	<footer>
+		<h2>©2017 WebCamp</h2>
+	</footer>
+
 </body>
 </html>
