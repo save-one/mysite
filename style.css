@@ -221,13 +221,16 @@ hr {
 }
 .main-image:nth-child(4) {
 	background-image: url(img/webcamp.png);
+	margin-bottom: 0;
 }
 .main-image:nth-child(5) {
 	background-image: url(img/talk.jpg);
+	margin-bottom: 0;
 }
 .main-image:nth-child(6) {
 	background-image: url(img/webcamp-mother.png);
 	margin-right: 0;
+	margin-bottom: 0;
 }
 
 .feature {
@@ -387,7 +390,6 @@ hr {
 }
 
 .social {
-	margin-bottom: 90px;
 	width: 400px;
 	float: right;
 }
@@ -452,6 +454,7 @@ footer h2 {
     .main-visual {
     	height: 750px;
     	background-image: url(img/code.png);
+    	background-position: center;
     }
 
     .main-visual-content h1 {
@@ -474,10 +477,17 @@ footer h2 {
     	float: none;
     	margin: 0 auto;
     	margin-bottom: 10px;
+    	width: auto;
+    	max-width: 320px;
+    	max-height: 250px;
     }
 
     .main-image:nth-child(odd) {
     	display: none;
+    }
+
+    .main-image:nth-child(4) {
+    	margin-bottom: 10px;
     }
 
     .main-image:nth-child(6) {
@@ -495,6 +505,7 @@ footer h2 {
     }
 
     .feature-strength h4 {
+    	width: 100%;
     	display: inline-block;
     	text-align: left;
     }
@@ -525,6 +536,10 @@ footer h2 {
 
     .profile-title {
     	margin-top: 20px;
+    }
+
+    .profile-content {
+    	word-wrap:break-word;;
     }
 
     .contact {
